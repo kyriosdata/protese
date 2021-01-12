@@ -1,3 +1,4 @@
 ## Logo
 
-- Versão inicial criada por https://zerotomastery.io/resources/
+- Versão inicial criada [SquareSpace Logo Maker](https://www.squarespace.com/logo)
+- Outros recursos similares podem ser encontrados em https://zerotomastery.io/resources/
