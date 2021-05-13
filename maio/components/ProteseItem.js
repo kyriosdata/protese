@@ -1,23 +1,25 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
-const ProteseItem = (props) => {
+const ProteseItem = ({ id, descricao, onPress }) => {
   return (
-    <View style={styles.itemLista} key={props.descricao}>
-      <Text>{props.descricao}</Text>
-    </View>
+    <TouchableOpacity activeOpacity={0.5} onPress={onPress.bind(this, id)}>
+      <View style={styles.item}>
+        <Text>{descricao}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  itemLista: {
+  item: {
     flex: 1,
     flexDirection: "row",
     padding: 10,
     borderWidth: 0.5,
     borderColor: "gray",
     marginVertical: 10,
-    backgroundColor: "lightblue",
+    backgroundColor: "lightgreen",
   },
 });
 
