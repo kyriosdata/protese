@@ -11,4 +11,6 @@ Adicionalmente, o nome do arquivo pode conter como
 prefixo a indicação do tipo de prótese, por exemplo,
 todos as próteses totais podem ter como prefixo
 1\_, ou seja, arquivo de nome **1_01.jpg** é uma
-foto de uma prótese total.
+foto de uma prótese total, **2_25.jpg** seria uma 
+foto de uma prótese parcial removível e **3_08.jpg**
+uma foto de uma prótese parcial fixa. 
