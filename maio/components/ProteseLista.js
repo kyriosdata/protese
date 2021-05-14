@@ -1,7 +1,8 @@
 import React from "react";
-import { View, FlatList, StyleSheet } from "react-native";
+import { View, Text, FlatList, StyleSheet } from "react-native";
 
 import ProteseItem from "./ProteseItem";
+import Cores from "../constants/Cores";
 
 const ProteseLista = ({ lista, onPress }) => {
   return (
@@ -16,6 +17,7 @@ const ProteseLista = ({ lista, onPress }) => {
           />
         )}
         keyExtractor={(elemento) => elemento.imagem}
+        contentContainerStyle={styles.flatlist}
       />
     </View>
   );
@@ -23,8 +25,13 @@ const ProteseLista = ({ lista, onPress }) => {
 
 const styles = StyleSheet.create({
   lista: {
-    flex: 1,
-    flexDirection: "row",
+    width: "100%",
+    alignItems: "center",
+    backgroundColor: Cores.claro,
+  },
+
+  flatlist: {
+    paddingLeft: 0,
   },
 });
 

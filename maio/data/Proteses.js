@@ -25,8 +25,7 @@ const totais = [
     imagem: "0.44090005424089307",
   },
   {
-    descricao:
-      "terceira mensagem, talvez tenha algum item, talvez mais de um...",
+    descricao: "terceira mensagem, talvez tenha algum item",
     imagem: "0.652043037690932",
   },
   {
