@@ -1,15 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import Card from "./Card";
 import Cores from "../constants/Cores";
 
-const ProteseItem = ({ id, descricao, onPress }) => {
+const ProteseItem = ({ id, descricao, imagem, onPress }) => {
   return (
     <TouchableOpacity activeOpacity={0.5} onPress={onPress.bind(this, id)}>
       <Card style={styles.item}>
         <View style={styles.foto}>
-          <Text>Foto</Text>
+          <Image style={styles.imagem} source={imagem} />
         </View>
         <View style={styles.descricao}>
           <Text>{descricao}</Text>
@@ -28,6 +28,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     marginVertical: 6,
     backgroundColor: Cores.branco,
+  },
+
+  imagem: {
+    width: 50,
+    height: 50,
   },
 
   foto: {

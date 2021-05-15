@@ -11,9 +11,10 @@ const ProteseLista = ({ lista, onPress }) => {
         data={lista}
         renderItem={({ item }) => (
           <ProteseItem
-            id={item.imagem}
+            id={item.id}
             onPress={onPress}
             descricao={item.descricao}
+            imagem={item.imagem}
           />
         )}
         keyExtractor={(elemento) => elemento.imagem}
