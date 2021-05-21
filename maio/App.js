@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Button, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { AppLoading } from "expo";
+import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 
 import Header from "./components/Header";
@@ -29,6 +29,10 @@ export default function App() {
   const [showInfo, setShowInfo] = useState(false);
   const [dataLoaded, setDataLoaded] = useState(false);
 
+  function fechaInformacao() {
+    setShowInfo(false);
+  }
+
   if (!dataLoaded) {
     return (
       <AppLoading
@@ -39,9 +43,6 @@ export default function App() {
     );
   }
 
-  function fechaInformacao() {
-    setShowInfo(false);
-  }
   return (
     <View style={styles.container}>
       <Header title="Prótese Dentária" />
