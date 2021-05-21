@@ -1,12 +1,21 @@
-import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Button, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { AppLoading } from "expo";
+import * as Font from "expo-font";
 
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
 import Informacao from "./components/Informacao";
 import Cores from "./constants/Cores";
+
+const fetchFonts = () => {
+  return Font.loadAsync({
+    "raleway-regular": require("./assets/fontes/Raleway-Regular.ttf"),
+    "raleway-bold": require("./assets/fontes/Raleway-Bold.ttf"),
+  });
+};
 
 function onPress(chave) {
   console.log("item clicked", chave);
@@ -18,6 +27,17 @@ function informacao() {
 
 export default function App() {
   const [showInfo, setShowInfo] = useState(false);
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  if (!dataLoaded) {
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+        onError={console.log}
+      />
+    );
+  }
 
   function fechaInformacao() {
     setShowInfo(false);
