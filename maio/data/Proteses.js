@@ -20,13 +20,38 @@ import React from "react";
 const totais = [
   {
     id: "3_1",
-    descricao: "uma mensagem",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
     imagem: require("../assets/fotos/3_1.jpg"),
   },
   {
     id: "3_2",
     descricao: "uma mensagem",
     imagem: require("../assets/fotos/3_2.jpg"),
+  },
+  {
+    id: "3_3",
+    descricao: "uma mensagem",
+    imagem: require("../assets/fotos/3_3.jpg"),
+  },
+  {
+    id: "3_4",
+    descricao: "uma mensagem",
+    imagem: require("../assets/fotos/3_4.jpg"),
+  },
+  {
+    id: "3_5",
+    descricao: "uma mensagem",
+    imagem: require("../assets/fotos/3_5.jpg"),
+  },
+  {
+    id: "3_6",
+    descricao: "uma mensagem",
+    imagem: require("../assets/fotos/3_6.jpg"),
+  },
+  {
+    id: "3_7",
+    descricao: "uma mensagem",
+    imagem: require("../assets/fotos/3_7.jpg"),
   },
 ];
 

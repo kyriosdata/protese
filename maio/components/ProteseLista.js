@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList, StyleSheet } from "react-native";
+import { View, FlatList, StyleSheet } from "react-native";
 
 import ProteseItem from "./ProteseItem";
 import Cores from "../constants/Cores";
@@ -17,7 +17,7 @@ const ProteseLista = ({ lista, onPress }) => {
             imagem={item.imagem}
           />
         )}
-        keyExtractor={(elemento) => elemento.imagem}
+        keyExtractor={(elemento) => elemento.id}
         contentContainerStyle={styles.flatlist}
       />
     </View>

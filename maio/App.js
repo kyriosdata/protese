@@ -29,6 +29,7 @@ export default function App() {
       <Informacao visible={showInfo} onClose={fechaInformacao} />
 
       <ProteseLista lista={Proteses.totais()} onPress={onPress} />
+
       <StatusBar style="auto" />
     </View>
   );
