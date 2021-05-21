@@ -3,6 +3,7 @@ import { StyleSheet, Button, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
+import { Ionicons } from "@expo/vector-icons";
 
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
@@ -46,6 +47,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header title="Prótese Dentária" />
+      <Ionicons name="search" size={32} color="green" />
+      <Ionicons name="information-circle-outline" size={32} color="black" />
       <Button title={"Informação"} onPress={() => setShowInfo(true)} />
       <Informacao visible={showInfo} onClose={fechaInformacao} />
 
