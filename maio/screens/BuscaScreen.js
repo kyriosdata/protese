@@ -18,4 +18,10 @@ const styles = StyleSheet.create({
   },
 });
 
+export const buscaOptions = (navData) => {
+  return {
+    title: "Busca",
+  };
+};
+
 export default BuscaScreen;

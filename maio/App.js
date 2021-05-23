@@ -7,8 +7,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Busca from "./screens/BuscaScreen";
-import Protese from "./screens/ProteseScreen";
+import Busca, { buscaOptions } from "./screens/BuscaScreen";
+import Protese, { proteseOptions } from "./screens/ProteseScreen";
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
@@ -87,11 +87,11 @@ function AppNavigator() {
           component={Home}
           options={{ title: "Prótese total" }}
         />
-        <Stack.Screen name="Busca" component={Busca} />
+        <Stack.Screen name="Busca" component={Busca} options={buscaOptions} />
         <Stack.Screen
           name="Protese"
           component={Protese}
-          options={{ title: "Prótese" }}
+          options={proteseOptions}
         />
       </Stack.Navigator>
     </NavigationContainer>

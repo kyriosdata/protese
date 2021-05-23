@@ -18,4 +18,8 @@ const styles = StyleSheet.create({
   },
 });
 
+export const proteseOptions = (navData) => {
+  return { title: "Prótese" };
+};
+
 export default ProteseScreen;
