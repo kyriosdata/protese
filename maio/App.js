@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
+import Busca from "./screens/Busca";
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
@@ -28,7 +29,7 @@ function informacao() {
   console.log("abrir modal");
 }
 
-function Home() {
+function Home({ navigation }) {
   const [showInfo, setShowInfo] = useState(false);
   const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -52,6 +53,7 @@ function Home() {
       <Ionicons name="search" size={32} color="green" />
       <Ionicons name="information-circle-outline" size={32} color="black" />
       <Button title={"Informação"} onPress={() => setShowInfo(true)} />
+      <Button title={"Busca"} onPress={() => navigation.navigate("Busca")} />
       <Informacao visible={showInfo} onClose={fechaInformacao} />
 
       <ProteseLista lista={Proteses.totais()} onPress={onPress} />
@@ -75,7 +77,12 @@ function AppNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ title: "Prótese total" }}
+        />
+        <Stack.Screen name="Busca" component={Busca} />
       </Stack.Navigator>
     </NavigationContainer>
   );
