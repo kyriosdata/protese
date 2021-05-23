@@ -1,0 +1,109 @@
+{
+  "dsp_spec_version": "0.0.1",
+  "last_updated_by": "",
+  "last_updated": "2021-05-06T19:18:01.838Z",
+  "entities": [
+    {
+      "class": "collection",
+      "type": "font",
+      "id": "90df7c98-345d-45cf-a0d6-74de92eecb4d",
+      "name": "Subtítulo — 24 pt",
+      "tags": [],
+      "related_entity_ids": [],
+      "ext-com_adobe-cclib": {
+        "source": "https://shared-assets.adobe.com/link/e788156b-25ef-46e0-7e7f-1009d5af6ec7",
+        "id": "71c501c9-6fa6-4e80-adc0-6f5fd8d3d833",
+        "last_sync": "2021-05-06T19:18:01.838Z",
+        "sync": true
+      },
+      "tokens": [
+        {
+          "id": "5022d2c4-1ed0-4f26-86f6-7948aff94e3b",
+          "type": "custom",
+          "value": "Segoe UI",
+          "key": "family"
+        },
+        {
+          "id": "5022d2c4-1ed0-4f26-86f6-7948aff94e3b",
+          "type": "custom",
+          "value": "Regular",
+          "key": "weight"
+        },
+        {
+          "id": "5022d2c4-1ed0-4f26-86f6-7948aff94e3b",
+          "type": "size",
+          "value": "24",
+          "key": "size"
+        }
+      ]
+    },
+    {
+      "class": "collection",
+      "type": "font",
+      "id": "8b986661-b345-403c-91c3-adb6e0092513",
+      "name": "Body text — 16 pt",
+      "tags": [],
+      "related_entity_ids": [],
+      "ext-com_adobe-cclib": {
+        "source": "https://shared-assets.adobe.com/link/e788156b-25ef-46e0-7e7f-1009d5af6ec7",
+        "id": "fc5d9b31-2760-41ed-a1ce-23ccccf372c7",
+        "last_sync": "2021-05-06T19:18:01.838Z",
+        "sync": true
+      },
+      "tokens": [
+        {
+          "id": "e71611a4-1245-4cb1-95dc-76426fa970ba",
+          "type": "custom",
+          "value": "Segoe UI",
+          "key": "family"
+        },
+        {
+          "id": "e71611a4-1245-4cb1-95dc-76426fa970ba",
+          "type": "custom",
+          "value": "Regular",
+          "key": "weight"
+        },
+        {
+          "id": "e71611a4-1245-4cb1-95dc-76426fa970ba",
+          "type": "size",
+          "value": "16",
+          "key": "size"
+        }
+      ]
+    },
+    {
+      "class": "collection",
+      "type": "font",
+      "id": "8c89af18-de86-43d4-afa2-b5ec3b9cae98",
+      "name": "Título 1 — 32 pt",
+      "tags": [],
+      "related_entity_ids": [],
+      "ext-com_adobe-cclib": {
+        "source": "https://shared-assets.adobe.com/link/e788156b-25ef-46e0-7e7f-1009d5af6ec7",
+        "id": "fb39c17a-7d22-447f-b8c8-7f391c24a248",
+        "last_sync": "2021-05-06T19:18:01.838Z",
+        "sync": true
+      },
+      "tokens": [
+        {
+          "id": "b7041a96-b469-4e89-b1d0-bdcc25cfa0da",
+          "type": "custom",
+          "value": "Segoe UI",
+          "key": "family"
+        },
+        {
+          "id": "b7041a96-b469-4e89-b1d0-bdcc25cfa0da",
+          "type": "custom",
+          "value": "Regular",
+          "key": "weight"
+        },
+        {
+          "id": "b7041a96-b469-4e89-b1d0-bdcc25cfa0da",
+          "type": "size",
+          "value": "32",
+          "key": "size"
+        }
+      ]
+    }
+  ]
+}
