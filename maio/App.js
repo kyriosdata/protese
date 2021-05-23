@@ -6,6 +6,7 @@ import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Busca, { buscaOptions } from "./screens/BuscaScreen";
 import Protese, { proteseOptions } from "./screens/ProteseScreen";
@@ -14,6 +15,7 @@ import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
 import Informacao from "./components/Informacao";
 import Cores from "./constants/Cores";
+import TabNavigator from "./navigators/TabNavigator";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -78,15 +80,12 @@ const styles = StyleSheet.create({
 });
 
 const Stack = createStackNavigator();
-function AppNavigator() {
+const Tab = createBottomTabNavigator();
+
+function StackNavigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{ title: "Prótese total" }}
-        />
         <Stack.Screen name="Busca" component={Busca} options={buscaOptions} />
         <Stack.Screen
           name="Protese"
@@ -98,4 +97,4 @@ function AppNavigator() {
   );
 }
 
-export default AppNavigator;
+export default TabNavigator;

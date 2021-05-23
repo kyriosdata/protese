@@ -1,10 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Button } from "react-native";
 
-const BuscaScreen = () => {
+const BuscaScreen = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <Text>Busca</Text>
+      <Button
+        title={"Protese"}
+        onPress={() => navigation.navigate("Protese")}
+      />
     </View>
   );
 };
