@@ -4,6 +4,8 @@ import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
@@ -26,7 +28,7 @@ function informacao() {
   console.log("abrir modal");
 }
 
-export default function App() {
+function Home() {
   const [showInfo, setShowInfo] = useState(false);
   const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -67,3 +69,16 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
 });
+
+const Stack = createStackNavigator();
+function AppNavigator() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default AppNavigator;
