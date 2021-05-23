@@ -7,7 +7,8 @@ import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Busca from "./screens/Busca";
+import Busca from "./screens/BuscaScreen";
+import Protese from "./screens/ProteseScreen";
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
@@ -54,6 +55,10 @@ function Home({ navigation }) {
       <Ionicons name="information-circle-outline" size={32} color="black" />
       <Button title={"Informação"} onPress={() => setShowInfo(true)} />
       <Button title={"Busca"} onPress={() => navigation.navigate("Busca")} />
+      <Button
+        title={"Protese"}
+        onPress={() => navigation.navigate("Protese")}
+      />
       <Informacao visible={showInfo} onClose={fechaInformacao} />
 
       <ProteseLista lista={Proteses.totais()} onPress={onPress} />
@@ -83,6 +88,11 @@ function AppNavigator() {
           options={{ title: "Prótese total" }}
         />
         <Stack.Screen name="Busca" component={Busca} />
+        <Stack.Screen
+          name="Protese"
+          component={Protese}
+          options={{ title: "Prótese" }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,16 +1,16 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const Busca = () => {
+const BuscaScreen = () => {
   return (
-    <View style={styles.busca}>
+    <View style={styles.screen}>
       <Text>Busca</Text>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  busca: {
+  screen: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Busca;
+export default BuscaScreen;
