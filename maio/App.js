@@ -29,20 +29,9 @@ function informacao() {
 
 function Home({ navigation }) {
   const [showInfo, setShowInfo] = useState(false);
-  const [dataLoaded, setDataLoaded] = useState(false);
 
   function fechaInformacao() {
     setShowInfo(false);
-  }
-
-  if (!dataLoaded) {
-    return (
-      <AppLoading
-        startAsync={fetchFonts}
-        onFinish={() => setDataLoaded(true)}
-        onError={console.log}
-      />
-    );
   }
 
   return (
