@@ -4,12 +4,7 @@ import { StatusBar } from "expo-status-bar";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Busca, { buscaOptions } from "./screens/BuscaScreen";
-import Protese, { proteseOptions } from "./screens/ProteseScreen";
 import Header from "./components/Header";
 import ProteseLista from "./components/ProteseLista";
 import Proteses from "./data/Proteses";
@@ -79,22 +74,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
+function start() {
+  const [naoCarregado, setNaoCarregado] = useState(true);
 
-function StackNavigator() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Busca" component={Busca} options={buscaOptions} />
-        <Stack.Screen
-          name="Protese"
-          component={Protese}
-          options={proteseOptions}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+  if (naoCarregado) {
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setNaoCarregado(false)}
+        onError={console.log}
+      />
+    );
+  }
+
+  return <TabNavigator />;
 }
 
-export default TabNavigator;
+export default start;

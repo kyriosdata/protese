@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import Busca, { buscaOptions } from "../screens/BuscaScreen";
 import ProtesesScreen from "../screens/ProtesesScreen";
+import ProtesesNavigator from "./ProtesesNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -11,6 +12,7 @@ function TabNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        <Tab.Screen name="Próteses Navigator" component={ProtesesNavigator} />
         <Tab.Screen
           name="PT"
           component={ProtesesScreen}
