@@ -1,4 +1,5 @@
 import React from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
@@ -29,11 +30,34 @@ const barOptions = {
 };
 
 const totalIconTabBar = () => {
-  return <Ionicons name={"information"} size={23} color={"yellow"} />;
+  return (
+    <View style={styles.foto}>
+      <Image style={styles.imagem} source={require("../assets/total.png")} />
+    </View>
+  );
+};
+
+const fixaIconTabBar = () => {
+  return (
+    <View style={styles.foto}>
+      <Image style={styles.imagem} source={require("../assets/fixa.png")} />
+    </View>
+  );
+};
+
+const removivelIconTabBar = () => {
+  return (
+    <View style={styles.foto}>
+      <Image
+        style={styles.imagem}
+        source={require("../assets/removivel.png")}
+      />
+    </View>
+  );
 };
 
 const proteseTotalTab = () => ({
-  title: "X",
+  title: "Total",
   headerShown: false,
   tabBarIcon: totalIconTabBar,
 });
@@ -41,11 +65,13 @@ const proteseTotalTab = () => ({
 const proteseParcialFixaTab = () => ({
   title: "Fixa",
   headerShown: false,
+  tabBarIcon: fixaIconTabBar,
 });
 
 const proteseParcialRemovivelTab = () => ({
   title: "Removível",
   headerShown: false,
+  tabBarIcon: removivelIconTabBar,
 });
 
 const Tab = createBottomTabNavigator();
@@ -57,7 +83,6 @@ function TabNavigator() {
         <Tab.Screen
           name="Total"
           component={StackNavigator}
-          screenOptions={{ title: "PT" }}
           options={proteseTotalTab}
         />
         <Tab.Screen
@@ -75,5 +100,16 @@ function TabNavigator() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  foto: {
+    width: "25%",
+  },
+
+  imagem: {
+    width: 25,
+    height: 25,
+  },
+});
 
 export default TabNavigator;
