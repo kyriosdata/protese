@@ -4,20 +4,20 @@ import { createStackNavigator } from "@react-navigation/stack";
 import ProtesesScreen from "../screens/ProtesesScreen";
 import ProteseScreen, { proteseOptions } from "../screens/ProteseScreen";
 
-const ProteseStack = createStackNavigator();
+const Stack = createStackNavigator();
 
-const ProteseStackNavigator = ({ navigation }) => {
+const StackNavigator = ({ navigation }) => {
   console.log(navigation);
   return (
-    <ProteseStack.Navigator>
-      <ProteseStack.Screen name="A" component={ProtesesScreen} />
-      <ProteseStack.Screen
+    <Stack.Navigator>
+      <Stack.Screen name="A" component={ProtesesScreen} />
+      <Stack.Screen
         name="ProteseScreen B"
         component={ProteseScreen}
         options={proteseOptions}
       />
-    </ProteseStack.Navigator>
+    </Stack.Navigator>
   );
 };
 
-export default ProteseStackNavigator;
+export default StackNavigator;
