@@ -1,77 +1,81 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
-import Busca, { buscaOptions } from "../screens/BuscaScreen";
-import ProtesesScreen from "../screens/ProtesesScreen";
+import Busca from "../screens/BuscaScreen";
 import StackNavigator from "./StackNavigator";
+import Cores from "../constants/Cores";
 
-const tabScreenOptions = ({ route }) => ({
-  tabBarIcon: ({ focused, color, size }) => {
-    let iconName;
+const tabScreenOptions = () => ({
+  headerShown: false,
 
-    if (route.name === "Total") {
-      iconName = focused ? "information" : "help";
-    } else if (route.name === "Settings") {
-      iconName = focused ? "help" : "information";
-    }
+  tabBarActiveTintColor: Cores.claro,
+  tabBarActiveBackgroundColor: Cores.escuro,
 
-    // You can return any component that you like here!
-    return <Ionicons name={iconName} size={size} color={color} />;
-  },
-  tabBarOptions: barOptions,
+  tabBarInactiveTintColor: Cores.escuro,
+  tabBarInactiveBackgroundColor: Cores.claro,
 });
 
-const barOptions = {
-  activeTintColor: "tomato",
-  inactiveTintColor: "gray",
-};
-
-const totalIconTabBar = () => {
+const totalIconTabBar = ({ color }) => {
   return (
-    <View style={styles.foto}>
-      <Image style={styles.imagem} source={require("../assets/total.png")} />
-    </View>
+    <Image
+      style={{ ...styles.imagem, tintColor: color }}
+      source={require("../assets/total.png")}
+    />
   );
 };
 
-const fixaIconTabBar = () => {
+const fixaIconTabBar = ({ color }) => {
   return (
-    <View style={styles.foto}>
-      <Image style={styles.imagem} source={require("../assets/fixa.png")} />
-    </View>
+    <Image
+      style={{ ...styles.imagem, tintColor: color }}
+      source={require("../assets/fixa.png")}
+    />
   );
 };
 
-const removivelIconTabBar = () => {
+const removivelIconTabBar = ({ color }) => {
   return (
-    <View style={styles.foto}>
-      <Image
-        style={styles.imagem}
-        source={require("../assets/removivel.png")}
-      />
-    </View>
+    <Image
+      style={{ ...styles.imagem, tintColor: color }}
+      source={require("../assets/removivel.png")}
+    />
   );
 };
 
-const proteseTotalTab = () => ({
+const buscaIconTabBar = ({ color }) => {
+  return <Ionicons name="search" size={25} color={color} />;
+};
+
+const infoIconTabBar = ({ color }) => {
+  return <Ionicons name="information-circle-outline" size={25} color={color} />;
+};
+
+const totalTabOptions = () => ({
   title: "Total",
-  headerShown: false,
   tabBarIcon: totalIconTabBar,
 });
 
-const proteseParcialFixaTab = () => ({
+const parcialTabOptions = () => ({
   title: "Fixa",
-  headerShown: false,
   tabBarIcon: fixaIconTabBar,
 });
 
-const proteseParcialRemovivelTab = () => ({
+const removivelTabOptions = () => ({
   title: "Removível",
-  headerShown: false,
   tabBarIcon: removivelIconTabBar,
+});
+
+const buscaTabOptions = () => ({
+  title: "Busca",
+  tabBarIcon: buscaIconTabBar,
+});
+
+const infoTabOptions = () => ({
+  title: "Informações",
+  tabBarIcon: infoIconTabBar,
 });
 
 const Tab = createBottomTabNavigator();
@@ -79,33 +83,30 @@ const Tab = createBottomTabNavigator();
 function TabNavigator() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={tabScreenOptions}>
         <Tab.Screen
           name="Total"
           component={StackNavigator}
-          options={proteseTotalTab}
+          options={totalTabOptions}
         />
         <Tab.Screen
           name="Fixa"
           component={StackNavigator}
-          options={proteseParcialFixaTab}
+          options={parcialTabOptions}
         />
         <Tab.Screen
           name="Removível"
           component={StackNavigator}
-          options={proteseParcialRemovivelTab}
+          options={removivelTabOptions}
         />
-        <Tab.Screen name="Busca" component={Busca} />
+        <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
+        <Tab.Screen name="Info" component={Busca} options={infoTabOptions} />
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  foto: {
-    width: "25%",
-  },
-
   imagem: {
     width: 25,
     height: 25,
