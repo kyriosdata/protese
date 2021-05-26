@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Text, Modal, Button, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-const Informacao = ({ visible, onClose }) => {
+const Informacao = ({ onClose }) => {
   return (
-    <Modal visible={visible}>
+    <View style={styles.screen}>
       <View style={styles.linha}>
         <Text>Prótese Dentária</Text>
         <Button title={"Fechar"} onPress={onClose} />
@@ -47,11 +47,17 @@ const Informacao = ({ visible, onClose }) => {
       <View style={styles.linha}>
         <Text>os três ícones</Text>
       </View>
-    </Modal>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   linha: {
     flexDirection: "row",
     justifyContent: "center",

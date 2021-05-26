@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Image } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
@@ -8,6 +8,20 @@ import Busca from "../screens/BuscaScreen";
 import StackNavigator from "./StackNavigator";
 import Cores from "../constants/Cores";
 import Proteses from "../data/Proteses";
+import Informacao from "../components/Informacao";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const tabScreenOptions = () => {
+  return {
+    headerShown: false,
+
+    tabBarActiveTintColor: Cores.claro,
+    tabBarActiveBackgroundColor: Cores.escuro,
+
+    tabBarInactiveTintColor: Cores.escuro,
+    tabBarInactiveBackgroundColor: Cores.claro,
+  };
+};
 
 const totalIconTabBar = ({ color }) => {
   return (
@@ -71,19 +85,7 @@ const infoTabOptions = () => ({
 
 const Tab = createBottomTabNavigator();
 
-function TabNavigator(objeto) {
-  const tabScreenOptions = (interno) => {
-    return {
-      headerShown: false,
-
-      tabBarActiveTintColor: Cores.claro,
-      tabBarActiveBackgroundColor: Cores.escuro,
-
-      tabBarInactiveTintColor: Cores.escuro,
-      tabBarInactiveBackgroundColor: Cores.claro,
-    };
-  };
-
+function TabNavigator() {
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={tabScreenOptions}>
@@ -106,7 +108,18 @@ function TabNavigator(objeto) {
           initialParams={{ proteses: Proteses.parciaisRemoviveis() }}
         />
         <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
-        <Tab.Screen name="Info" component={Busca} options={infoTabOptions} />
+        <Tab.Screen
+          name="Testando"
+          component={Informacao}
+          options={infoTabOptions}
+          listeners={({ navigation }) => ({
+            tabPress: (event) => {
+              event.preventDefault();
+              console.log("informacoes...");
+              navigation.navigate("CreateNew");
+            },
+          })}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
@@ -118,5 +131,19 @@ const styles = StyleSheet.create({
     height: 25,
   },
 });
+
+const ModalStack = createStackNavigator();
+
+function ModalStackNavigator() {
+  return (
+    <ModalStack.Navigator presentation="modal">
+      <ModalStack.Screen
+        name="CreateNew"
+        component={CreateNew}
+        options={{ headerShown: false }}
+      />
+    </ModalStack.Navigator>
+  );
+}
 
 export default TabNavigator;
