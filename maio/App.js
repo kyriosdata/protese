@@ -13,6 +13,7 @@ const fetchFonts = () => {
 
 function start() {
   const [naoCarregado, setNaoCarregado] = useState(true);
+  const [tipo, setTipo] = useState("PT");
 
   if (naoCarregado) {
     return (
@@ -24,7 +25,7 @@ function start() {
     );
   }
 
-  return <TabNavigator />;
+  return <TabNavigator tipo={tipo} setTipo={setTipo} />;
 }
 
 export default start;

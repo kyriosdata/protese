@@ -13,7 +13,13 @@ function onPress(chave) {
   console.log("item clicked", chave);
 }
 
-function ProtesesScreen({ navigation }) {
+function ProtesesScreen(objeto) {
+  if (objeto.route.params) {
+    console.log("ProtesesScreen params received...");
+  }
+
+  const { navigation } = objeto;
+
   const [showInfo, setShowInfo] = useState(false);
 
   function fechaInformacao() {
@@ -22,9 +28,7 @@ function ProtesesScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Header title="Prótese Dentária" />
-      <Ionicons name="search" size={32} color="green" />
-      <Ionicons name="information-circle-outline" size={32} color="black" />
+      <Header title="Header temporário" />
       <Button title={"Informação"} onPress={() => setShowInfo(true)} />
       <Button title={"Busca"} onPress={() => navigation.navigate("Busca")} />
       <Button
@@ -33,7 +37,7 @@ function ProtesesScreen({ navigation }) {
       />
       <Informacao visible={showInfo} onClose={fechaInformacao} />
 
-      <ProteseLista lista={Proteses.totais()} onPress={onPress} />
+      <ProteseLista lista={objeto.route.params.proteses} onPress={onPress} />
 
       <StatusBar style="auto" />
     </View>

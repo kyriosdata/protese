@@ -7,16 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import Busca from "../screens/BuscaScreen";
 import StackNavigator from "./StackNavigator";
 import Cores from "../constants/Cores";
-
-const tabScreenOptions = () => ({
-  headerShown: false,
-
-  tabBarActiveTintColor: Cores.claro,
-  tabBarActiveBackgroundColor: Cores.escuro,
-
-  tabBarInactiveTintColor: Cores.escuro,
-  tabBarInactiveBackgroundColor: Cores.claro,
-});
+import Proteses from "../data/Proteses";
 
 const totalIconTabBar = ({ color }) => {
   return (
@@ -46,11 +37,11 @@ const removivelIconTabBar = ({ color }) => {
 };
 
 const buscaIconTabBar = ({ color }) => {
-  return <Ionicons name="search" size={25} color={color} />;
+  return <Ionicons name="search-outline" size={22} color={color} />;
 };
 
 const infoIconTabBar = ({ color }) => {
-  return <Ionicons name="information-circle-outline" size={25} color={color} />;
+  return <Ionicons name="information-circle-outline" size={22} color={color} />;
 };
 
 const totalTabOptions = () => ({
@@ -80,24 +71,39 @@ const infoTabOptions = () => ({
 
 const Tab = createBottomTabNavigator();
 
-function TabNavigator() {
+function TabNavigator(objeto) {
+  const tabScreenOptions = (interno) => {
+    return {
+      headerShown: false,
+
+      tabBarActiveTintColor: Cores.claro,
+      tabBarActiveBackgroundColor: Cores.escuro,
+
+      tabBarInactiveTintColor: Cores.escuro,
+      tabBarInactiveBackgroundColor: Cores.claro,
+    };
+  };
+
   return (
     <NavigationContainer>
       <Tab.Navigator screenOptions={tabScreenOptions}>
         <Tab.Screen
-          name="Total"
+          name="Prótese total"
           component={StackNavigator}
           options={totalTabOptions}
+          initialParams={{ proteses: Proteses.totais() }}
         />
         <Tab.Screen
-          name="Fixa"
+          name="Prótete parcial fixa"
           component={StackNavigator}
           options={parcialTabOptions}
+          initialParams={{ proteses: Proteses.parciaisFixas() }}
         />
         <Tab.Screen
-          name="Removível"
+          name="Prótese parcial removível"
           component={StackNavigator}
           options={removivelTabOptions}
+          initialParams={{ proteses: Proteses.parciaisRemoviveis() }}
         />
         <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
         <Tab.Screen name="Info" component={Busca} options={infoTabOptions} />

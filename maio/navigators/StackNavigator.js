@@ -6,11 +6,19 @@ import ProteseScreen, { proteseOptions } from "../screens/ProteseScreen";
 
 const Stack = createStackNavigator();
 
-const StackNavigator = ({ navigation }) => {
-  console.log(navigation);
+const StackNavigator = (objeto) => {
+  if (objeto.route.params) {
+    console.log("StackNavigator params received...");
+  }
+  const { route } = objeto;
   return (
     <Stack.Navigator>
-      <Stack.Screen name="A" component={ProtesesScreen} />
+      <Stack.Screen
+        name="PT"
+        component={ProtesesScreen}
+        options={{ title: route.name }}
+        initialParams={objeto.route.params}
+      />
       <Stack.Screen
         name="ProteseScreen B"
         component={ProteseScreen}

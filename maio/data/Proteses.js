@@ -55,16 +55,32 @@ const totais = [
   },
 ];
 
+const fixas = [
+  {
+    id: "3_8",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_8.jpg"),
+  },
+];
+
+const removiveis = [
+  {
+    id: "3_9",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_9.jpg"),
+  },
+];
+
 export default class Proteses {
   static totais() {
     return totais;
   }
 
   static parciaisFixas() {
-    return totais;
+    return fixas;
   }
 
   static parciaisRemoviveis() {
-    return totais;
+    return removiveis;
   }
 }
