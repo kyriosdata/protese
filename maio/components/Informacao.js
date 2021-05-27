@@ -1,12 +1,17 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-const Informacao = ({ onClose }) => {
+const Informacao = ({ navigation }) => {
   return (
     <View style={styles.screen}>
       <View style={styles.linha}>
         <Text>Prótese Dentária</Text>
-        <Button title={"Fechar"} onPress={onClose} />
+        <Button
+          title={"Fechar"}
+          onPress={() => {
+            navigation.goBack();
+          }}
+        />
       </View>
 
       <View style={styles.info}>
@@ -56,6 +61,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "blue",
   },
 
   linha: {

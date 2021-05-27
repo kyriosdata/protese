@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 
-import TabNavigator from "./navigators/TabNavigator";
+import { NavigationContainer } from "@react-navigation/native";
+import MainNavigator from "./navigators/MainNavigator";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -10,6 +11,14 @@ const fetchFonts = () => {
     "raleway-bold": require("./assets/fontes/Raleway-Bold.ttf"),
   });
 };
+
+function AppNavigatorContainer() {
+  return (
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
+  );
+}
 
 function start() {
   const [naoCarregado, setNaoCarregado] = useState(true);
@@ -25,7 +34,7 @@ function start() {
     );
   }
 
-  return <TabNavigator tipo={tipo} setTipo={setTipo} />;
+  return <AppNavigatorContainer tipo={tipo} setTipo={setTipo} />;
 }
 
 export default start;

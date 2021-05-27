@@ -1,6 +1,6 @@
 import React from "react";
-import { View, StyleSheet, Image } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
+import { StyleSheet, Image } from "react-native";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -9,7 +9,6 @@ import StackNavigator from "./StackNavigator";
 import Cores from "../constants/Cores";
 import Proteses from "../data/Proteses";
 import Informacao from "../components/Informacao";
-import { createStackNavigator } from "@react-navigation/stack";
 
 const tabScreenOptions = () => {
   return {
@@ -130,33 +129,4 @@ const styles = StyleSheet.create({
   },
 });
 
-const CreateNew = () => (
-  <View style={{ flex: 1, backgroundColor: "blue" }}></View>
-);
-/**
- * Navegador principal, modal.
- */
-const ModalStack = createStackNavigator();
-
-function ModalStackNavigator() {
-  return (
-    <ModalStack.Navigator presentation="modal">
-      <ModalStack.Screen name="TabNavigator" component={TabNavigator} />
-      <ModalStack.Screen
-        name="CreateNew"
-        component={CreateNew}
-        options={{ headerShown: false }}
-      />
-    </ModalStack.Navigator>
-  );
-}
-
-function AppNavegacao() {
-  return (
-    <NavigationContainer>
-      <ModalStackNavigator />
-    </NavigationContainer>
-  );
-}
-
-export default AppNavegacao;
+export default TabNavigator;
