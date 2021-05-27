@@ -1,56 +1,60 @@
 import React from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+
+import Botao from "../components/Botao";
+import Cores from "../constants/Cores";
 
 const Informacao = ({ navigation }) => {
   return (
     <View style={styles.screen}>
-      <View style={styles.linha}>
-        <Text>Prótese Dentária</Text>
-        <Button
-          title={"Fechar"}
-          onPress={() => {
-            navigation.goBack();
-          }}
-        />
-      </View>
+      <View style={styles.safearea}>
+        <View style={styles.linha}>
+          <Text>Prótese Dentária</Text>
+          <Botao titulo={"Fechar"} aoClicar={() => navigation.goBack()} />
+        </View>
 
-      <View style={styles.info}>
-        <View style={styles.bloco}>
-          <View style={styles.rotulo}>
-            <Text style={styles.vertical}>Professores</Text>
+        <View style={styles.info}>
+          <View style={styles.bloco}>
+            <View style={styles.rotulo}>
+              <Text style={styles.vertical}>Professores</Text>
+            </View>
+            <View>
+              <Text style={styles.texto}>
+                Érica Miranda de Torres{"\n"}
+                Aderico Santana Guilherme{"\n"}
+                Carlos de Paula e Souza{"\n"}
+                Célio Umberto de Araújo{"\n"}
+                Cláudio Rodrigues Leles{"\n"}
+                Fábio Nogueira de Lucena{"\n"}
+                Hugo de Carvalho Júnior{"\n"}
+                Ricardo Alexandre Zavanelli{"\n"}
+                Willian Barnabé{"\n"}
+              </Text>
+            </View>
           </View>
-          <View>
-            <Text>Érica Miranda de Torres</Text>
-            <Text>Aderico Santana Guilherme</Text>
-            <Text>Carlos de Paula e Souza</Text>
-            <Text>Célio Umberto de Araújo</Text>
-            <Text>Cláudio Rodrigues Leles</Text>
-            <Text>Fábio Nogueira de Lucena</Text>
-            <Text>Hugo de Carvalho Júnior</Text>
-            <Text>Ricardo Alexandre Zavanelli</Text>
-            <Text>Willian Barnabé</Text>
+
+          <View style={styles.bloco}>
+            <View style={styles.rotulo}>
+              <Text style={styles.vertical}>Estudantes</Text>
+            </View>
+            <View>
+              <Text style={styles.texto}>
+                Fábio Lisita Moreira Filho{"\n"}
+                Fernandes de Carvalho{"\n"}
+                Larissa Mendes de Souza Jorge{"\n"}
+                Mariana Luísa Fernandes de Carvalho{"\n"}
+                Marisa Alves Araújo{"\n"}
+                Matheus Pereira Marques{"\n"}
+                Thalita Fernanes Fleury Curado{"\n"}
+                Thiêssy Tamylla de Freitas{"\n"}
+              </Text>
+            </View>
           </View>
         </View>
 
-        <View style={styles.bloco}>
-          <View style={styles.rotulo}>
-            <Text style={styles.vertical}>Estudantes</Text>
-          </View>
-          <View>
-            <Text>Fábio Lisita Moreira Filho</Text>
-            <Text>Fernandes de Carvalho</Text>
-            <Text>Larissa Mendes de Souza Jorge</Text>
-            <Text>Mariana Luísa Fernandes de Carvalho</Text>
-            <Text>Marisa Alves Araújo</Text>
-            <Text>Matheus Pereira Marques</Text>
-            <Text>Thalita Fernanes Fleury Curado</Text>
-            <Text>Thiêssy Tamylla de Freitas</Text>
-          </View>
+        <View style={styles.linha}>
+          <Text>os três ícones</Text>
         </View>
-      </View>
-
-      <View style={styles.linha}>
-        <Text>os três ícones</Text>
       </View>
     </View>
   );
@@ -61,13 +65,18 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue",
+    backgroundColor: Cores.claro,
+  },
+
+  safearea: {
+    height: "80%",
   },
 
   linha: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-around",
     alignItems: "center",
+    paddingVertical: 10,
   },
 
   info: {
@@ -87,6 +96,10 @@ const styles = StyleSheet.create({
 
   vertical: {
     transform: [{ rotate: "270deg" }],
+  },
+
+  texto: {
+    fontSize: 12,
   },
 });
 
