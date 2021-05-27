@@ -87,41 +87,39 @@ const Tab = createBottomTabNavigator();
 
 function TabNavigator() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={tabScreenOptions}>
-        <Tab.Screen
-          name="Prótese total"
-          component={StackNavigator}
-          options={totalTabOptions}
-          initialParams={{ proteses: Proteses.totais() }}
-        />
-        <Tab.Screen
-          name="Prótete parcial fixa"
-          component={StackNavigator}
-          options={parcialTabOptions}
-          initialParams={{ proteses: Proteses.parciaisFixas() }}
-        />
-        <Tab.Screen
-          name="Prótese parcial removível"
-          component={StackNavigator}
-          options={removivelTabOptions}
-          initialParams={{ proteses: Proteses.parciaisRemoviveis() }}
-        />
-        <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
-        <Tab.Screen
-          name="Testando"
-          component={Informacao}
-          options={infoTabOptions}
-          listeners={({ navigation }) => ({
-            tabPress: (event) => {
-              event.preventDefault();
-              console.log("informacoes...");
-              navigation.navigate("CreateNew");
-            },
-          })}
-        />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Tab.Navigator screenOptions={tabScreenOptions}>
+      <Tab.Screen
+        name="Prótese total"
+        component={StackNavigator}
+        options={totalTabOptions}
+        initialParams={{ proteses: Proteses.totais() }}
+      />
+      <Tab.Screen
+        name="Prótete parcial fixa"
+        component={StackNavigator}
+        options={parcialTabOptions}
+        initialParams={{ proteses: Proteses.parciaisFixas() }}
+      />
+      <Tab.Screen
+        name="Prótese parcial removível"
+        component={StackNavigator}
+        options={removivelTabOptions}
+        initialParams={{ proteses: Proteses.parciaisRemoviveis() }}
+      />
+      <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
+      <Tab.Screen
+        name="Testando"
+        component={Informacao}
+        options={infoTabOptions}
+        listeners={({ navigation }) => ({
+          tabPress: (event) => {
+            event.preventDefault();
+            console.log("informacoes...");
+            navigation.navigate("CreateNew");
+          },
+        })}
+      />
+    </Tab.Navigator>
   );
 }
 
@@ -132,11 +130,18 @@ const styles = StyleSheet.create({
   },
 });
 
+const CreateNew = () => (
+  <View style={{ flex: 1, backgroundColor: "blue" }}></View>
+);
+/**
+ * Navegador principal, modal.
+ */
 const ModalStack = createStackNavigator();
 
 function ModalStackNavigator() {
   return (
     <ModalStack.Navigator presentation="modal">
+      <ModalStack.Screen name="TabNavigator" component={TabNavigator} />
       <ModalStack.Screen
         name="CreateNew"
         component={CreateNew}
@@ -146,4 +151,12 @@ function ModalStackNavigator() {
   );
 }
 
-export default TabNavigator;
+function AppNavegacao() {
+  return (
+    <NavigationContainer>
+      <ModalStackNavigator />
+    </NavigationContainer>
+  );
+}
+
+export default AppNavegacao;
