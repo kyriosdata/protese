@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import AppLoading from "expo-app-loading";
 import * as Font from "expo-font";
 
-import { NavigationContainer } from "@react-navigation/native";
-import MainNavigator from "./navigators/MainNavigator";
+import AppNavigatorContainer from "./navigators/AppNavigatorContainer";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -12,17 +11,8 @@ const fetchFonts = () => {
   });
 };
 
-function AppNavigatorContainer() {
-  return (
-    <NavigationContainer>
-      <MainNavigator />
-    </NavigationContainer>
-  );
-}
-
 function start() {
   const [naoCarregado, setNaoCarregado] = useState(true);
-  const [tipo, setTipo] = useState("PT");
 
   if (naoCarregado) {
     return (
@@ -34,7 +24,7 @@ function start() {
     );
   }
 
-  return <AppNavigatorContainer tipo={tipo} setTipo={setTipo} />;
+  return <AppNavigatorContainer />;
 }
 
 export default start;
