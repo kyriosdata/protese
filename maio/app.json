@@ -1,28 +1,28 @@
 {
   "expo": {
-    "name": "maio",
-    "slug": "maio",
+    "name": "Próteses",
+    "slug": "proteses",
+    "description": "Ilustrações esclarecedoras e de fácil acesso de tipos de próteses dentárias.",
     "version": "1.0.0",
+    "githubUrl": "https://github.com/kyriosdata/protese",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/protese-logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/protese-logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#E6FFF7"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#E6FFF7"
       }
     },
     "web": {
