@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 
 import Botao from "../components/Botao";
 import Cores from "../constants/Cores";
@@ -9,7 +9,11 @@ const Informacao = ({ navigation }) => {
     <View style={styles.screen}>
       <View style={styles.safearea}>
         <View style={styles.linha}>
-          <Text>Prótese Dentária</Text>
+          <Image
+            style={styles.logo}
+            source={require("../assets/protese-logo.png")}
+          />
+          <Text style={styles.titulo}>Prótese Dentária</Text>
           <Botao titulo={"Fechar"} aoClicar={() => navigation.goBack()} />
         </View>
 
@@ -53,7 +57,18 @@ const Informacao = ({ navigation }) => {
         </View>
 
         <View style={styles.linha}>
-          <Text>os três ícones</Text>
+          <Image
+            style={styles.marca}
+            source={require("../assets/logo-fo.png")}
+          />
+          <Image
+            style={styles.marca}
+            source={require("../assets/logo-inf.png")}
+          />
+          <Image
+            style={styles.marca}
+            source={require("../assets/logo-ufg.png")}
+          />
         </View>
       </View>
     </View>
@@ -65,11 +80,27 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: Cores.claro,
+    backgroundColor: "#ffffff",
   },
 
   safearea: {
-    height: "80%",
+    height: "85%",
+    width: "100%",
+  },
+
+  titulo: {
+    fontSize: 23,
+  },
+
+  logo: {
+    width: 40,
+    height: 40,
+  },
+
+  marca: {
+    resizeMode: "contain",
+    width: 80,
+    height: 80,
   },
 
   linha: {
@@ -82,7 +113,7 @@ const styles = StyleSheet.create({
   info: {
     flex: 1,
     justifyContent: "space-evenly",
-    backgroundColor: "yellow",
+    backgroundColor: Cores.claro,
   },
 
   bloco: {

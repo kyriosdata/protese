@@ -15,7 +15,7 @@ const logoHeader = () => (
         height: 23,
         tintColor: Cores.claro,
       }}
-      source={require("../assets/logo.png")}
+      source={require("../assets/protese-logo.png")}
     />
   </View>
 );
