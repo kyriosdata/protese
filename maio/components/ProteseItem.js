@@ -32,17 +32,17 @@ const styles = StyleSheet.create({
   },
 
   imagem: {
-    width: 50,
-    height: 50,
+    width: 60,
+    height: 60,
   },
 
   foto: {
-    width: "25%",
-    backgroundColor: "yellow",
+    borderRadius: 7,
+    overflow: "hidden",
   },
 
   descricao: {
-    width: "70%",
+    width: "76%",
   },
 });
 

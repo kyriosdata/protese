@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { StyleSheet, Button, View } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-import Header from "../components/Header";
 import ProteseLista from "../components/ProteseLista";
 import Cores from "../constants/Cores";
 
@@ -12,20 +11,11 @@ function onPress(chave) {
 
 function ProtesesScreen(objeto) {
   if (objeto.route.params) {
-    console.log("ProtesesScreen params received...");
+    console.log("ProtesesScreen params received...", objeto.route.name);
   }
-
-  const { navigation } = objeto;
 
   return (
     <View style={styles.container}>
-      <Header title="Header temporário" />
-      <Button title={"Busca"} onPress={() => navigation.navigate("Busca")} />
-      <Button
-        title={"Protese"}
-        onPress={() => navigation.navigate("Protese")}
-      />
-
       <ProteseLista lista={objeto.route.params.proteses} onPress={onPress} />
 
       <StatusBar style="auto" />
