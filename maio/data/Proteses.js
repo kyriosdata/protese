@@ -55,16 +55,62 @@ const totais = [
   },
 ];
 
+const fixas = [
+  {
+    id: "3_8",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_8.jpg"),
+  },
+  {
+    id: "3_9",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_9.jpg"),
+  },
+  {
+    id: "3_10",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_10.jpg"),
+  },
+  {
+    id: "3_11",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_11.jpg"),
+  },
+];
+
+const removiveis = [
+  {
+    id: "3_12",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_12.jpg"),
+  },
+  {
+    id: "3_13",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_13.jpg"),
+  },
+  {
+    id: "3_14",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_14.jpg"),
+  },
+  {
+    id: "3_15",
+    descricao: "uma mensagem, possivelmente em texto bem mais extenso",
+    imagem: require("../assets/fotos/3_15.jpg"),
+  },
+];
+
 export default class Proteses {
   static totais() {
     return totais;
   }
 
   static parciaisFixas() {
-    return totais;
+    return fixas;
   }
 
   static parciaisRemoviveis() {
-    return totais;
+    return removiveis;
   }
 }

@@ -1,28 +1,34 @@
 {
   "expo": {
-    "name": "maio",
-    "slug": "maio",
+    "owner": "kyriosdata",
+    "name": "Próteses",
+    "slug": "proteses",
+    "description": "Ilustrações esclarecedoras e de fácil acesso de tipos de próteses dentárias.",
     "version": "1.0.0",
+    "githubUrl": "https://github.com/kyriosdata/protese",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/protese-logo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/protese-splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#FFFFFF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "icon": "./assets/protese-logo-ios.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.github.kyriosdata.proteses",
+      "buildNumber": "1.0.0"
     },
     "android": {
+      "package": "com.github.kyriosdata.proteses",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/protese-logo.png",
+        "backgroundColor": "#ffffff"
       }
     },
     "web": {
