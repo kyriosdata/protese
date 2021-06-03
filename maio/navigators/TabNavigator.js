@@ -114,7 +114,7 @@ function TabNavigator() {
           tabPress: (event) => {
             event.preventDefault();
             console.log("informacoes...");
-            navigation.navigate("CreateNew");
+            navigation.navigate("Informacao");
           },
         })}
       />

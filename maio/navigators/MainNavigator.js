@@ -19,7 +19,7 @@ function MainNavigator() {
       screenOptions={{ headerShown: false }}
     >
       <ModalStack.Screen name="TabNavigator" component={TabNavigator} />
-      <ModalStack.Screen name="CreateNew" component={Informacao} />
+      <ModalStack.Screen name="Informacao" component={Informacao} />
     </ModalStack.Navigator>
   );
 }
