@@ -2,14 +2,14 @@
 
 Informações e detalhes sobre próteses para estudantes de odontologia.
 
-## Android
+## Configuração, ...
 
-- https://expo.io/@kyriosdata/proteses
-
-## iOS
+- `https://expo.io/@proteses/protese` (URL onde atualizações serão publicada)
+- `expo publish`
 
 - `expo export --public-url https://kyriosdata.github.io/protese`
 - `expo build:android --public-url https://kyriosdata.github.io/protese/android-index.json`
+- `expo build:android --public-url https://kyriosdata.github.io/protese/ios-index.json`
 
 ## Desenvolvimento
 

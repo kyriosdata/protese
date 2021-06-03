@@ -1,6 +1,6 @@
 {
   "expo": {
-    "owner": "kyriosdata",
+    "owner": "proteses",
     "name": "Próteses",
     "slug": "protese",
     "description": "Ilustrações esclarecedoras e de fácil acesso de tipos de próteses dentárias.",
@@ -16,7 +16,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "icon": "./assets/protese-logo-ios.png",
       "supportsTablet": true,
