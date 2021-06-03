@@ -19,7 +19,8 @@ const styles = StyleSheet.create({
 });
 
 export const proteseOptions = (navigation) => ({
-  title: "Título",
+  title: "Detalhe",
+  headerBackTitle: "Retornar",
 });
 
 export default ProteseScreen;
