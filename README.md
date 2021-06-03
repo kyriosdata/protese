@@ -4,14 +4,37 @@ Informações e detalhes sobre próteses para estudantes de odontologia.
 
 ## Configuração, ...
 
+- Usuário "proteses" criado no Expo.io.
+
 - `https://expo.io/@proteses/protese` (URL onde atualizações serão publicada)
+
+Durante desenvolvimento, cada alteração a ser disponibilizada exige
+
 - `expo publish`
+
+## Acesso durante desenvolvimento (Android ou iOS)
+
+- Instalar Expo Go em seu dispositivo. Este aplicativo encontra-se
+  disponível tanto na Apple Store quanto Google Play, é gratuito.
+- Na aba `Profile`, realizar `Sign in` com a conta de usuário `proteses` (a senha não segue aqui por segurança).
+
+### Usuários (iOS)
+
+- Acesso ao aplicativo (para testes) (há duas opções)
+  - Seguir link `https://expo.io/@proteses/protese` onde se encontra o QRcode que pode ser aberto pelo iOS, ou
+  - Seguir link `exp://exp.host/@proteses/protese` (navegador). Por comodidade, este link está disponível para cópia no endereço
+    `https://expo.io/@proteses/protese`.
+
+### Usuários (Android)
+
+- Seguir URL `https://expo.io/@proteses/protese`
+- Clicar no botão `Abrir com Expo Go`
+
+## Desenvolvimento
 
 - `expo export --public-url https://kyriosdata.github.io/protese`
 - `expo build:android --public-url https://kyriosdata.github.io/protese/android-index.json`
 - `expo build:android --public-url https://kyriosdata.github.io/protese/ios-index.json`
-
-## Desenvolvimento
 
 - expo start
 - expo export --public-url https://kyriosdata.github.io/protese
