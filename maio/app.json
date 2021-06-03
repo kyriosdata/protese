@@ -16,7 +16,9 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "icon": "./assets/protese-logo-ios.png",
       "supportsTablet": true,
