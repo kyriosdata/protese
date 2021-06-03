@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const ProteseScreen = () => {
+const ProteseScreen = ({ route }) => {
   return (
     <View style={styles.screen}>
-      <Text>Detalhe de uma prótese</Text>
+      <Text>Exibir {route.params.imagem}</Text>
     </View>
   );
 };
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
   },
 });
 
-export const proteseOptions = (navData) => {
-  return { title: "Prótese" };
-};
+export const proteseOptions = (navigation) => ({
+  title: "Título",
+});
 
 export default ProteseScreen;

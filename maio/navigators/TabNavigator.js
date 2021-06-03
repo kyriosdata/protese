@@ -106,14 +106,14 @@ function TabNavigator() {
         initialParams={{ proteses: Proteses.parciaisRemoviveis() }}
       />
       <Tab.Screen name="Busca" component={Busca} options={buscaTabOptions} />
+
       <Tab.Screen
-        name="Testando"
+        name="InformacaoScreen"
         component={Informacao}
         options={infoTabOptions}
         listeners={({ navigation }) => ({
           tabPress: (event) => {
             event.preventDefault();
-            console.log("informacoes...");
             navigation.navigate("Informacao");
           },
         })}

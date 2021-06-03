@@ -32,6 +32,8 @@ Durante desenvolvimento, cada alteração a ser disponibilizada exige
 
 ## Desenvolvimento
 
+- Ícones (ionincons): https://icons.expo.fyi/
+
 - `expo export --public-url https://kyriosdata.github.io/protese`
 - `expo build:android --public-url https://kyriosdata.github.io/protese/android-index.json`
 - `expo build:android --public-url https://kyriosdata.github.io/protese/ios-index.json`

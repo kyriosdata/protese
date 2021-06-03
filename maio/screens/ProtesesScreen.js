@@ -1,24 +1,16 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { StatusBar } from "expo-status-bar";
 
 import ProteseLista from "../components/ProteseLista";
 import Cores from "../constants/Cores";
 
-function onPress(chave) {
-  console.log("item clicked", chave);
-}
-
-function ProtesesScreen(objeto) {
-  if (objeto.route.params) {
-    console.log("ProtesesScreen params received...", objeto.route.name);
-  }
+function ProtesesScreen({ route, navigation }) {
+  const onPress = (clicked) =>
+    navigation.navigate("detalhe", { imagem: clicked });
 
   return (
     <View style={styles.container}>
-      <ProteseLista lista={objeto.route.params.proteses} onPress={onPress} />
-
-      <StatusBar style="auto" />
+      <ProteseLista lista={route.params.proteses} onPress={onPress} />
     </View>
   );
 }

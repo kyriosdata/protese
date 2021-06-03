@@ -6,6 +6,8 @@ import ProtesesScreen from "../screens/ProtesesScreen";
 import ProteseScreen, { proteseOptions } from "../screens/ProteseScreen";
 import Cores from "../constants/Cores";
 
+// Acrescente em stackNavigatorsOptions return
+//   headerLeft: logoHeader,
 const logoHeader = () => (
   <View style={styles.logo}>
     <Image
@@ -21,7 +23,6 @@ const logoHeader = () => (
 );
 
 const stackNavigatorOptions = () => ({
-  headerLeft: logoHeader,
   headerStyle: {
     backgroundColor: Cores.escuro,
   },
@@ -37,11 +38,6 @@ const styles = StyleSheet.create({
 const Stack = createStackNavigator();
 
 const StackNavigator = ({ route }) => {
-  if (route.params) {
-    console.log("StackNavigator params received...");
-    console.log(route.name);
-  }
-
   return (
     <Stack.Navigator screenOptions={stackNavigatorOptions}>
       <Stack.Screen
