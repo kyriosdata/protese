@@ -2,7 +2,7 @@
   "expo": {
     "owner": "kyriosdata",
     "name": "Próteses",
-    "slug": "proteses",
+    "slug": "protese",
     "description": "Ilustrações esclarecedoras e de fácil acesso de tipos de próteses dentárias.",
     "version": "1.0.0",
     "githubUrl": "https://github.com/kyriosdata/protese",
@@ -16,17 +16,15 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "icon": "./assets/protese-logo-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.github.kyriosdata.proteses",
+      "bundleIdentifier": "com.github.kyriosdata.protese",
       "buildNumber": "1.0.0"
     },
     "android": {
-      "package": "com.github.kyriosdata.proteses",
+      "package": "com.github.kyriosdata.protese",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/protese-logo.png",
