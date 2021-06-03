@@ -6,7 +6,7 @@ Informações e detalhes sobre próteses para estudantes de odontologia.
 
 - Usuário "proteses" criado no Expo.io.
 
-- `https://expo.io/@proteses/protese` (URL onde atualizações serão publicada)
+- https://expo.io/@proteses/protese (URL onde atualizações serão publicada)
 
 Durante desenvolvimento, cada alteração a ser disponibilizada exige
 
@@ -14,7 +14,7 @@ Durante desenvolvimento, cada alteração a ser disponibilizada exige
 
 ## Acesso durante desenvolvimento (Android ou iOS)
 
-- Instalar Expo Go em seu dispositivo. Este aplicativo encontra-se
+- Instalar o aplicativo Expo Go em seu dispositivo. Este aplicativo encontra-se
   disponível tanto na Apple Store quanto Google Play, é gratuito.
 - Na aba `Profile`, realizar `Sign in` com a conta de usuário `proteses` (a senha não segue aqui por segurança).
 
