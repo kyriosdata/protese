@@ -7,7 +7,10 @@ import Descricao from "./Descricao";
 
 const ProteseItem = ({ id, descricao, imagem, onPress }) => {
   return (
-    <TouchableOpacity activeOpacity={0.5} onPress={onPress.bind(this, id)}>
+    <TouchableOpacity
+      activeOpacity={0.5}
+      onPress={onPress.bind(this, id, imagem)}
+    >
       <Card style={styles.card}>
         <View style={styles.foto}>
           <Image style={styles.imagem} source={imagem} />

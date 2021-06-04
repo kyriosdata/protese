@@ -5,8 +5,8 @@ import ProteseLista from "../components/ProteseLista";
 import Cores from "../constants/Cores";
 
 function ProtesesScreen({ route, navigation }) {
-  const onPress = (clicked) =>
-    navigation.navigate("detalhe", { imagem: clicked });
+  const onPress = (id, imagem) =>
+    navigation.navigate("detalhe", { id, imagem });
 
   return (
     <View style={styles.container}>
