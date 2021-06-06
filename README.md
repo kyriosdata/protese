@@ -2,6 +2,10 @@
 
 Informações e detalhes sobre próteses para estudantes de odontologia.
 
+# Design (UX)
+
+- Ideia inicial ([aqui](design/ux/cliente))
+
 ## Configuração, ...
 
 - Usuário "proteses" criado no Expo.io.
