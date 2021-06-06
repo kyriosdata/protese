@@ -2,9 +2,11 @@
 
 Informações e detalhes sobre próteses para estudantes de odontologia.
 
-# Design (UX)
+# Organização
 
-- Ideia inicial ([aqui](design/ux/cliente))
+- _Landing page_ in [docs](docs)
+- Projeto ([design](design))
+- Implementação corrente ([maio](maio))
 
 ## Configuração, ...
 
