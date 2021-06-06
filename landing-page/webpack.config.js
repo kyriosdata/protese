@@ -17,6 +17,10 @@ module.exports = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.(svg|png|jp(e*)g|gif)$/,
+        use: ["file-loader"],
+      },
     ],
   },
   devtool: "eval-cheap-module-source-map",
