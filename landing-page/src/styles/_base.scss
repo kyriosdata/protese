@@ -9,7 +9,20 @@ body {
 }
 
 #hero {
+  flex-direction: row;
   background-image: url("../../public/background-cloud.svg");
   background-repeat: no-repeat;
   background-color: aliceblue;
+}
+
+.linha {
+  flex-direction: row;
+}
+
+.titulo {
+  background-color: bisque;
+}
+
+.telas {
+  background-color: burlywood;
 }
