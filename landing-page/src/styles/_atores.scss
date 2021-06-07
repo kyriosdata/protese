@@ -1,15 +1,17 @@
 .download {
   display: flex;
   flex-direction: row;
-  background-color: bisque;
+  max-width: 80%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .expo {
-  padding: 5px 9px 5px 9px;
+  margin-right: 3px;
 }
 
 .stores {
-  display: flex;
-  flex-direction: row;
-  height: 40px;
+  height: 20px;
 }
