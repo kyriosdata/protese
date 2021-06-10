@@ -14,7 +14,7 @@ module.exports = {
         exclude: [path.resolve(__dirname, "node_modules")],
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|sass)$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {

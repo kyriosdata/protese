@@ -1,4 +1,15 @@
+//@import "bulma/css/bulma.min.css";
+//@import "bulma/sass/utilities/_all.sass";
+@import "bulma/bulma.sass";
+
+.cabecalho {
+  background: $grey-dark;
+  padding: 1.6rem 0;
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
 @import "./base";
-@import "./header";
 @import "./atores";
 @import "./realizacao";

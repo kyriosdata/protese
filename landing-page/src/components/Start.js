@@ -1,42 +1,63 @@
 import React from "react";
-import Header from "./Header";
 
 export default class Start extends React.Component {
   render() {
     return (
       <div>
-        <div className="header">Uma ferramenta de ensino!</div>
-        <div id="hero">
-          <div className="linha">
-            <div className="icone">
-              <img src="protese-logo.png" height="80" />
-            </div>
-            <div className="titulo">
-              <Header
-                title={"Próteses dentárias"}
-                subtitle={"Ambiente-se com os mais variados tipos de próteses"}
-              />
-            </div>
-            <div className="telas">
-              <img src="telas.png" height="400px" />
+        <section class="hero is-fullheight">
+          <div className="hero-head">
+            <div className="cabecalho">Uma ferramenta de ensino!</div>
+          </div>
+          <div className="hero-body has-text-centered">
+            <div className="container">
+              <div className="level">
+                <div className="level-left">
+                  <div className="level-item">
+                    <img src="protese-logo.png" width="40" />
+                  </div>
+                  <div className="level-item">
+                    <div className="has-text-left">
+                      <div>
+                        <h1 className="title is-1">Próteses dentárias</h1>
+                      </div>
+                      <p className="subtitle is-3">
+                        Ambiente-se com os mais variados tipos de próteses
+                      </p>
+                    </div>
+                  </div>
+                  <div className="level-item">
+                    <img src="telas.png" width="400px" />
+                  </div>
+                </div>
+              </div>
+              <div className="section">
+                <div className="columns is-vcentered">
+                  <div className="column is-3"></div>
+                  <div className="column is-6">
+                    <div className="columns is-vcentered">
+                      <div class="column is-4">
+                        <span className="icon-text">
+                          <ion-icon name="heart"></ion-icon>
+                          <span>Expo Go</span>
+                        </span>
+                      </div>
+                      <div className="column is-4">App Store</div>
+                      <div className="column is-4">Google Play</div>
+                    </div>
+                  </div>
+                  <div className="column is-3"></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="download">
-          <div className="expo">
-            <img src="expo.png" height="20px" className="expo" />
+          <div className="hero-foot">
+            <div className="realizacao">
+              <img src="logo-fo.png" width="80" />
+              <img src="logo-inf.png" width="92" />
+              <img src="logo-ufg.png" width="95" />
+            </div>
           </div>
-          <div className="stores">
-            <img src="stores.png" height="20px" />
-          </div>
-        </div>
-
-        <div className="realizacao">
-          <img src="logo-fo.png" width="80" />
-          <img src="logo-inf.png" height="75" />
-          <img src="logo-ufg.png" width="65" />
-        </div>
+        </section>
       </div>
     );
   }
