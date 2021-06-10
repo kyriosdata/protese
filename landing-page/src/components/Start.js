@@ -35,14 +35,30 @@ export default class Start extends React.Component {
                   <div className="column is-3"></div>
                   <div className="column is-6">
                     <div className="columns is-vcentered">
-                      <div class="column is-4">
-                        <span className="icon-text">
-                          <ion-icon name="heart"></ion-icon>
-                          <span>Expo Go</span>
-                        </span>
+                      <div className="column is-4">
+                        <div className="icon-text">
+                          <div className="icon">
+                            <img src="chevron-up-outline.svg"></img>
+                          </div>
+                          <span className="has-text-link">Expo Go</span>
+                        </div>
                       </div>
-                      <div className="column is-4">App Store</div>
-                      <div className="column is-4">Google Play</div>
+                      <div className="column is-4">
+                        <div className="icon-text">
+                          <div className="icon">
+                            <img src="logo-apple.svg"></img>
+                          </div>
+                          <span className="has-text-link">App Store</span>
+                        </div>
+                      </div>
+                      <div className="column is-4">
+                        <div className="icon-text">
+                          <div className="icon">
+                            <img src="logo-google-playstore.svg"></img>
+                          </div>
+                          <span className="has-text-link">Google Play</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div className="column is-3"></div>
@@ -51,10 +67,29 @@ export default class Start extends React.Component {
             </div>
           </div>
           <div className="hero-foot">
-            <div className="realizacao">
-              <img src="logo-fo.png" width="80" />
-              <img src="logo-inf.png" width="92" />
-              <img src="logo-ufg.png" width="95" />
+            <div className="section">
+              <div className="level">
+                <div className="level-left">
+                  <div className="level-item">
+                    <div className="subtitle">Realização</div>
+                  </div>
+                  <div className="level-item">
+                    <div className="image is-48x48">
+                      <img src="logo-fo.png" width="80" />
+                    </div>
+                  </div>
+                  <div className="level-item">
+                    <div className="image is-48x48">
+                      <img src="logo-inf.png" width="92" />
+                    </div>
+                  </div>
+                  <div className="level-item">
+                    <div className="image is-64x64">
+                      <img src="logo-ufg.png" width="95" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
